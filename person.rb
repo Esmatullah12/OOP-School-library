@@ -6,8 +6,8 @@ class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
 
-
-  def initialize(age, name = 'Unknwon', parent_permission = true)
+  def initialize(age, name = 'Unknwon', parent_permission: true)
+    super()
     @id = Random.rand(1000)
     @name = name
     @age = age
@@ -29,8 +29,7 @@ class Person < Nameable
   end
 end
 
-
-person = Person.new(22, name = 'esmatasdfasdfasd')
+person = Person.new(22, 'esmatasdfasdfasd')
 person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
 puts capitalized_person.correct_name
