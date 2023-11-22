@@ -29,7 +29,7 @@ class Person < Nameable
   end
 end
 
-person = Person.new(22, 'esmatasdfasdfasd')
+person = Person.new(22, 'hekamt123456')
 person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
 puts capitalized_person.correct_name
